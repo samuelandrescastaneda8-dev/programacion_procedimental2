@@ -1,21 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="../css/pedidos.css">
+
     <title>Pedidos</title>
 </head>
-<body>
 
+<body>
     <div class="encabezado">
+
         <h1>Pedidos</h1>
 
         <a href="../index.html">
             <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png"
-            alt="Casita" width="80">
+                 alt="Casita">
         </a>
+  
+    </div>
+
+    <!-- FORMULARIO -->
+    <div class="contenedor-formulario">
+
+        <form class="formulario">
+
+            <h2>Realizar Pedido</h2>
+
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="direccion">Dirección</label>
+            <input type="text" id="direccion" name="direccion" required>
+
+            <label for="telefono">Teléfono</label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="metodo_pago">Método de Pago</label>
+
+            <select id="metodo_pago" name="metodo_pago" required>
+                <option value="">Seleccione</option>
+                <option value="efectivo">Efectivo</option>
+                <option value="nequi">Nequi</option>
+                <option value="daviplata">Daviplata</option>
+                <option value="tarjeta">Tarjeta</option>
+            </select>
+
+            <label for="pedido">Pedido</label>
+
+            <textarea id="pedido"
+                      name="pedido"
+                      rows="4"
+                      required></textarea>
+
+            <button type="submit">Pedir</button>
+
+        </form>
+
     </div>
 
 </body>
+
 </html>
