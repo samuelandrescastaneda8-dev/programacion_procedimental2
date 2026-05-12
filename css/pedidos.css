@@ -1,0 +1,14 @@
+.encabezado{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;*/
+    padding: 10px 20px;
+}
+
+.encabezado h1{
+    margin: 1;
+}
+
+.encabezado img{
+    display: block;
+}
