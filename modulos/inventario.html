@@ -1,156 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
     <link rel="stylesheet" href="../css/inventario.css">
-    <title>Inventario </title>
+
+    <title>Formulario Inventario</title>
 </head>
 
 <body>
-    <h1>Inventario</h1>
-    <hr>
-     <div class="logo">
-        <a href="../index.html">
 
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Casita" width="80">
+    <h1 class="title has-text-centered">Formulario Inventario</h1>
+
+    <div class="logo">
+        <a href="../index.html">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" 
+            alt="Casita" width="80">
         </a>
     </div>
-    <table class="table">
-        <thead>
-            <tr>
-                <th><abbr title="nom_producto">Nombre del producto</abbr></th>
-                <th><abbr title="cod_producto">Codigo del producto</abbr></th>
-                <th><abbr title="categoria">categoria</abbr></th>
-                <th><abbr title="prec_unitario">Precio Unitario</abbr></th>
-                <th><abbr title="descripción">Descripcion</abbr></th>
-                <th><abbr title="presentacion">Presentacion</abbr></th>
-                <th><abbr title="marca">Marca</abbr></th>
-                <th><abbr title="peso">Peso</abbr></th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Morcilla</th>
-                <td>848734985729</td>
-                <td>Comida</td>
-                <td>19.000$</td>
-                <td>
-                    Sangre (normalmente de cerdo)
-                    Grasa de cerdo
-                    Arroz o algún relleno (pan, cebolla)
-                    Especias (sal, pimienta, ajo, etc.)
-                </td>
-                <td>En rodajas (cortada después de cocinarla)
-                    Caliente
-                    Acompañada de arepa, papa, yuca o pan
-                    y con limón o ají</td>
-                <td>Aurum</td>
-                <td>entre 200 y 400 gramos</td>
-            </tr>
-            <tr>
-                <th>Bandeja Paisa</th>
-                <td>8952803203</td>
-                <td>Comida</td>
-                <td>28.000$</td>
-                <td>
-                    Arroz,
-                    Fríjoles,
-                    Carne molida,
-                    Chicharrón,
-                    Huevo frito,
-                    Plátano maduro,
-                    Arepa,
-                    Morcilla o chorizo,
-                    Aguacate.
-                </td>
-                <td>un plato grande o bandeja, con porciones abundantes separadas:
-                    arroz y fríjoles como base, carnes encima, huevo frito al lado, y
-                    acompañamientos como arepa, plátano y aguacate organizados alrededor.</td>
-                <td>Aurum</td>
-                <td>1 y 1.5 kg</td>
-            </tr>
-            <tr>
-                <th>Ajiaco</th>
-                <td>0230148908409</td>
-                <td>Comida</td>
-                <td>24.000$</td>
-                <td>
-                    Pollo,
-                    Papas (criolla, pastusa y sabanera),
-                    Maíz en mazorca,
-                    Guascas (hierba aromática clave),
-                    Cebolla y ajo,
-                    Sal y pimienta,
-                    Crema de leche,
-                    Alcaparras,
-                    Arroz blanco,
-                    Aguacate,
-                </td>
-                <td>Se sirve como una sopa caliente en un plato hondo o tazón grande,
-                    con el caldo espeso, las papas deshacidas parcialmente y trozos de
-                    pollo y maíz visibles. Aparte se ofrecen crema de leche, alcaparras,
-                    arroz y aguacate para añadir al gusto.</td>
-                <td>Aurum</td>
-                <td>Entre 400 y 700 gramos</td>
-            </tr>
-            <tr>
-                <th>Empanadas</th>
-                <td>987238974298</td>
-                <td>Comida</td>
-                <td>4.000$</td>
-                <td>
-                    Masa de maíz (o harina de maíz),
-                    Carne (res, pollo o cerdo),
-                    Papa o arroz (según la versión),
-                    Cebolla, ajo y condimentos,
-                    Aceite para freír,
-                </td>
-                <td>Se sirven fritas, doradas y crujientes, generalmente en forma de media luna, acompañadas de ají o
-                    salsa.</td>
-                <td>Aurum</td>
-                <td>80 y 150 gramos</td>
-            </tr>
-            <tr>
-                <th>Jugos Naturales</th>
-                <td>5276742864</td>
-                <td>Bebida</td>
-                <td>8.000$</td>
-                <td>
-                    Fruta fresca
-                    Agua o leche
-                    Azúcar o endulzante (opcional)
-                    Hielo
-                </td>
-                <td>Se sirven fríos en vaso alto o jarra, con hielo, a veces decorados con rodaja de fruta o pajilla.
-                </td>
-                <td>La niña</td>
-                <td>Vaso individual: 250 a 400 ml</td>
-            </tr>
-            <tr>
-                <th>Postres</th>
-                <td>65364582</td>
-                <td>Adicion</td>
-                <td>12.000$</td>
-                <td>
-                    Leche o crema
-                    Azúcar
-                    Harina o galletas
-                    Huevos
-                    Frutas (según el postre)
-                    Chocolate, vainilla o caramelo
-                    Gelatina o maicena (en algunos casos)
-                </td>
-                <td>Se sirven en porciones individuales en platos o vasos pequeños, decorados con salsas, crema, frutas
-                    o chocolate, con estilo llamativo y dulce.
-                </td>
-                <td>Venecia</td>
-                <td>Entre 100 y 250 gramos</td>
-            </tr>
-        </tbody>
-    </table>
-</body>
 
+    <hr>
+
+    <div class="container">
+        <div class="box">
+
+            <form>
+
+                <!-- Codigo -->
+                <div class="field">
+                    <label class="label">Codigo_producto</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Ingrese el código">
+                    </div>
+                </div>
+
+                <!-- Nombre -->
+                <div class="field">
+                    <label class="label">Nombre_producto</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Ingrese el nombre">
+                    </div>
+                </div>
+
+                <!-- Precio -->
+                <div class="field">
+                    <label class="label">Precio_producto</label>
+                    <div class="control">
+                        <input class="input" type="number" placeholder="Ingrese el precio">
+                    </div>
+                </div>
+
+                <!-- Cantidad -->
+                <div class="field">
+                    <label class="label">Cantidad_producto</label>
+                    <div class="control">
+                        <input class="input" type="number" placeholder="Ingrese la cantidad">
+                    </div>
+                </div>
+
+                <!-- Marca -->
+                <div class="field">
+                    <label class="label">Marca_producto</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Ingrese la marca">
+                    </div>
+                </div>
+
+                <!-- Categoria -->
+                <div class="field">
+                    <label class="label">Categoria_producto</label>
+                    <div class="control">
+                        <div class="select is-fullwidth">
+                            <select>
+                                <option>Comida</option>
+                                <option>Bebida</option>
+                                <option>Adicion</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Unidad -->
+                <div class="field">
+                    <label class="label">Unidad_medida</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Ej: gramos, ml, kg">
+                    </div>
+                </div>
+
+                <!-- Boton -->
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-primary is-fullwidth">
+                            Guardar Producto
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+
+</body>
 </html>
