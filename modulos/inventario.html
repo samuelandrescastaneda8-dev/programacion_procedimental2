@@ -1,82 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
-    <link rel="stylesheet" href="../css/inventario.css">
 
     <title>Formulario Inventario</title>
 </head>
-
 <body>
 
     <h1 class="title has-text-centered">Formulario Inventario</h1>
-
-    <div class="logo">
-        <a href="../index.html">
-            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" 
-            alt="Casita" width="80">
-        </a>
-    </div>
-
-    <hr>
 
     <div class="container">
         <div class="box">
 
             <form>
 
-                <!-- Codigo -->
+                <!-- Código -->
                 <div class="field">
-                    <label class="label">Codigo_producto</label>
+                    <label class="label">Código Producto</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Ingrese el código">
+                        <input id="codigo_producto" class="input" type="text" placeholder="Ingrese el código">
                     </div>
                 </div>
 
                 <!-- Nombre -->
                 <div class="field">
-                    <label class="label">Nombre_producto</label>
+                    <label class="label">Nombre Producto</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Ingrese el nombre">
+                        <input id="nombre_producto" class="input" type="text" placeholder="Ingrese el nombre">
                     </div>
                 </div>
 
                 <!-- Precio -->
                 <div class="field">
-                    <label class="label">Precio_producto</label>
+                    <label class="label">Precio Producto</label>
                     <div class="control">
-                        <input class="input" type="number" placeholder="Ingrese el precio">
+                        <input id="precio_producto" class="input" type="number" placeholder="Ingrese el precio">
                     </div>
                 </div>
 
                 <!-- Cantidad -->
                 <div class="field">
-                    <label class="label">Cantidad_producto</label>
+                    <label class="label">Cantidad Producto</label>
                     <div class="control">
-                        <input class="input" type="number" placeholder="Ingrese la cantidad">
+                        <input id="cantidad_producto" class="input" type="number" placeholder="Ingrese la cantidad">
                     </div>
                 </div>
 
                 <!-- Marca -->
                 <div class="field">
-                    <label class="label">Marca_producto</label>
+                    <label class="label">Marca Producto</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Ingrese la marca">
+                        <input id="marca_producto" class="input" type="text" placeholder="Ingrese la marca">
                     </div>
                 </div>
 
-                <!-- Categoria -->
+                <!-- Categoría -->
                 <div class="field">
-                    <label class="label">Categoria_producto</label>
+                    <label class="label">Categoría Producto</label>
                     <div class="control">
                         <div class="select is-fullwidth">
-                            <select>
+                            <select id="categoria_producto">
+                                <option value="">Seleccione una categoría</option>
                                 <option>Comida</option>
                                 <option>Bebida</option>
-                                <option>Adicion</option>
+                                <option>Adición</option>
                             </select>
                         </div>
                     </div>
@@ -84,16 +74,16 @@
 
                 <!-- Unidad -->
                 <div class="field">
-                    <label class="label">Unidad_medida</label>
+                    <label class="label">Unidad de Medida</label>
                     <div class="control">
-                        <input class="input" type="text" placeholder="Ej: gramos, ml, kg">
+                        <input id="unidad_medida" class="input" type="text" placeholder="Ej: gramos, ml, kg">
                     </div>
                 </div>
 
-                <!-- Boton -->
+                <!-- Botón -->
                 <div class="field">
                     <div class="control">
-                        <button class="button is-primary is-fullwidth">
+                        <button type="button" onclick="ValidarDatos()" class="button is-primary is-fullwidth">
                             Guardar Producto
                         </button>
                     </div>
@@ -103,6 +93,8 @@
 
         </div>
     </div>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
