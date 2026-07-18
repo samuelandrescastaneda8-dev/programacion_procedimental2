@@ -8,7 +8,6 @@ function ValidarDatos() {
     let categoria_producto = document.getElementById("categoria_producto").value.trim();
     let unidad_medida = document.getElementById("unidad_medida").value.trim();
 
-    
     if (
         codigo_producto === "" ||
         nombre_producto === "" ||
@@ -18,45 +17,84 @@ function ValidarDatos() {
         categoria_producto === "" ||
         unidad_medida === ""
     ) {
-        alert("Ingrese todos los datos");
+        Swal.fire({
+            icon: "warning",
+            title: "Campos incompletos",
+            text: "Debe ingresar todos los datos."
+        });
         return;
     }
 
-   
-    if (/[a-zA-Z]/.test(codigo_producto)) {
-        alert("El código no debe contener letras");
+    if (!/^\d{4,10}$/.test(codigo_producto)) {
+        Swal.fire({
+            icon: "error",
+            title: "Código inválido",
+            text: "El código debe contener únicamente números (4 a 10 dígitos)."
+        });
         return;
     }
 
-  
-    if (/\d/.test(nombre_producto)) {
-        alert("El nombre no debe contener números");
+
+    if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,50}$/.test(nombre_producto)) {
+        Swal.fire({
+            icon: "error",
+            title: "Nombre inválido",
+            text: "El nombre solo puede contener letras y espacios (3 a 50 caracteres)."
+        });
         return;
     }
 
-   
-    if (/\d/.test(marca_producto)) {
-        alert("La marca no debe contener números");
+    if (isNaN(precio_producto) || Number(precio_producto) <= 0) {
+        Swal.fire({
+            icon: "error",
+            title: "Precio inválido",
+            text: "Ingrese un precio mayor que cero."
+        });
         return;
     }
 
- 
-    if (Number(precio_producto) <= 0) {
-        alert("Ingrese un precio válido");
+    if (!/^\d+$/.test(cantidad_producto) || Number(cantidad_producto) <= 0) {
+        Swal.fire({
+            icon: "error",
+            title: "Cantidad inválida",
+            text: "Ingrese una cantidad válida mayor que cero."
+        });
         return;
     }
 
-   
-    if (Number(cantidad_producto) <= 0) {
-        alert("Ingrese una cantidad válida");
+    if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ0-9\s]{2,30}$/.test(marca_producto)) {
+        Swal.fire({
+            icon: "error",
+            title: "Marca inválida",
+            text: "La marca solo puede contener letras, números y espacios."
+        });
         return;
     }
 
-    
-    if (/\d/.test(unidad_medida)) {
-        alert("La unidad de medida no debe contener números");
+    if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{3,30}$/.test(categoria_producto)) {
+        Swal.fire({
+            icon: "error",
+            title: "Categoría inválida",
+            text: "La categoría solo puede contener letras y espacios."
+        });
         return;
     }
 
-    alert("Producto guardado correctamente");
+    if (!/^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]{2,20}$/.test(unidad_medida)) {
+        Swal.fire({
+            icon: "error",
+            title: "Unidad de medida inválida",
+            text: "La unidad de medida solo puede contener letras."
+        });
+        return;
+    }
+
+    Swal.fire({
+        icon: "success",
+        title: "¡Correcto!",
+        text: "Producto guardado correctamente.",
+        confirmButtonText: "Aceptar"
+    });
 }
+
+document.getElementById("boton-guardar").onclick = ValidarDatos;

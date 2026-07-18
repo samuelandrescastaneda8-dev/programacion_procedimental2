@@ -5,19 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css">
+    <link rel="stylesheet" href="../css/inventario.css">
 
     <title>Formulario Inventario</title>
 </head>
 <body>
+    <div class="logo">
+        <a href="../index.html">
+
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Casita" width="80">
+        </a>
+    </div>
 
     <h1 class="title has-text-centered">Formulario Inventario</h1>
 
     <div class="container">
         <div class="box">
 
-            <form>
+            <div>
 
-                <!-- Código -->
+               
                 <div class="field">
                     <label class="label">Código Producto</label>
                     <div class="control">
@@ -25,7 +32,7 @@
                     </div>
                 </div>
 
-                <!-- Nombre -->
+           
                 <div class="field">
                     <label class="label">Nombre Producto</label>
                     <div class="control">
@@ -41,7 +48,7 @@
                     </div>
                 </div>
 
-                <!-- Cantidad -->
+              
                 <div class="field">
                     <label class="label">Cantidad Producto</label>
                     <div class="control">
@@ -49,7 +56,7 @@
                     </div>
                 </div>
 
-                <!-- Marca -->
+                
                 <div class="field">
                     <label class="label">Marca Producto</label>
                     <div class="control">
@@ -57,7 +64,7 @@
                     </div>
                 </div>
 
-                <!-- Categoría -->
+               
                 <div class="field">
                     <label class="label">Categoría Producto</label>
                     <div class="control">
@@ -72,7 +79,7 @@
                     </div>
                 </div>
 
-                <!-- Unidad -->
+                
                 <div class="field">
                     <label class="label">Unidad de Medida</label>
                     <div class="control">
@@ -80,21 +87,22 @@
                     </div>
                 </div>
 
-                <!-- Botón -->
+                
                 <div class="field">
                     <div class="control">
-                        <button type="button" onclick="ValidarDatos()" class="button is-primary is-fullwidth">
+                        <button type="button" onclick="ValidarDatos()" class="button is-primary is-fullwidth" id="boton-guardar">
                             Guardar Producto
                         </button>
                     </div>
                 </div>
 
-            </form>
+            </div>
 
         </div>
     </div>
 
-    <script src="script.js"></script>
+    <script src="../js/inventario.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 </body>
 </html>
